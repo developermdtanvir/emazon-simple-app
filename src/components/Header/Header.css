@@ -1,0 +1,34 @@
+.header img{
+    height:120px;
+    
+}
+.header{
+   text-align: center;
+}
+.header nav{
+  display: flex; 
+  justify-content: left;
+  background-color: black;
+  line-height: 50px;
+  
+
+}
+.header a{
+    text-decoration: none;
+    color:white;
+    margin: 25px;
+    font-size: 30px;
+    padding: 5px;
+}
+.header a:hover{
+    background-color: lightgray;
+    color:orange;
+}
+.header-search{
+    background-color: rgb(41, 39, 39);
+    line-height: 80px;
+}
+.header-search input {
+    height: 30px;
+    width:80%;
+}
