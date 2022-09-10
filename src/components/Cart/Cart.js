@@ -20,6 +20,12 @@ const Cart = (props) =>{
     }else if(total > 0){
         shipping = 12;
     }
+    const tax = total * .1;
+    const grandTotal = total + shipping + tax;
+    const formetNumber = number =>{
+        const toNumber = number.toFixed(2)
+        return toNumber;
+    }
     console.log(total);
     return(
         <div>
@@ -29,10 +35,10 @@ const Cart = (props) =>{
            </div>
            <p>items: <span>$</span></p>
            <p>Shipping & Handaling <span>${shipping}</span></p>
-           <p>Product Price : $ <span>{total}</span></p>
-           <p>Total before Tax : <span>$</span></p>
+           <p>Product Price : $ <span>{formetNumber(total)}</span></p>
+           <p>Total before Tax : <span>${formetNumber(tax)}</span></p>
            <p>Estimated Tax : <span>$</span></p>
-           <h3><span>Order Total : ${total + shipping}</span></h3>
+           <h3><span>Order Total : ${formetNumber(grandTotal)}</span></h3>
         </div>
     )
 }
